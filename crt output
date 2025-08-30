@@ -1,0 +1,21 @@
+!pip install gTTS
+Install gTTS (Google Text-to-Speech) if not already installed
+
+
+# Import the library
+from gtts import gTTS
+
+# -------- INPUT TEXT -----------
+text = ("onceupon a time there lived a ghost story")
+
+
+# -------- CREATE AUDIO ----------
+# Language can be changed: 'en' = English, 'hi' = Hindi, 'te' = Telugu, etc.
+tts = gTTS(text=text, lang='en')
+
+# -------- SAVE OUTPUT ----------
+tts.save("audiobook.mp3")
+
+print("✅ Audiobook saved as 'audiobook.mp3'")
+from IPython.display import Audio
+Audio("audiobook.mp3")
